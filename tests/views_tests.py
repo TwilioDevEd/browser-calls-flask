@@ -57,7 +57,7 @@ class TwilioTokenTests(BaseTest):
     def test_get_token_for_customer_by_default(self):
         # Given
         mock_capability = MagicMock()
-        mock_capability.generate.return_value = 'abc123'
+        mock_capability.to_jwt.return_value = 'abc123'
 
         # When
         with patch('browser_calls_flask.views.ClientCapabilityToken', return_value=mock_capability) as mock:
@@ -68,13 +68,13 @@ class TwilioTokenTests(BaseTest):
         # arguments and that the view returned the correct response
         self.assertTrue(mock_capability.allow_client_outgoing.called)
         mock_capability.allow_client_incoming.assert_called_once_with('customer')
-        self.assertTrue(mock_capability.generate.called)
+        self.assertTrue(mock_capability.to_jwt.called)
         self.assertEqual({"token": "abc123"}, json.loads(response.data.decode("utf-8")))
 
     def test_get_token_for_agent_if_referrer_is_dashboard(self):
         # Given
         mock_capability = MagicMock()
-        mock_capability.generate.return_value = 'abc123'
+        mock_capability.to_jwt.return_value = 'abc123'
 
         # When
         with patch('browser_calls_flask.views.ClientCapabilityToken', return_value=mock_capability) as mock:
@@ -83,7 +83,7 @@ class TwilioTokenTests(BaseTest):
         # Then
         self.assertTrue(mock_capability.allow_client_outgoing.called)
         mock_capability.allow_client_incoming.assert_called_once_with('support_agent')
-        self.assertTrue(mock_capability.generate.called)
+        self.assertTrue(mock_capability.to_jwt.called)
         self.assertEqual({"token": "abc123"}, json.loads(response.data.decode("utf-8")))
 
 
