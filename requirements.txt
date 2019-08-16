@@ -5,7 +5,7 @@ Flask==0.10.1
 Flask-Migrate==1.7.0
 Flask-Script==2.0.5
 Flask-SQLAlchemy==2.1
-Flask-WTF==0.12
+Flask-WTF==0.14.2
 Flask-Bootstrap==3.3.5.7
 
 # External libraries
