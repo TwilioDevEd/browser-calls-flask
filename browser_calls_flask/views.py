@@ -53,7 +53,7 @@ def get_token():
         capability.allow_client_incoming('customer')
 
     # Generate the capability token
-    token = str(capability.to_jwt(), 'utf-8')
+    token = capability.to_jwt().decode('utf-8')
 
     return jsonify({'token': token})
 
