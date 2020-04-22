@@ -57,7 +57,7 @@ class TwilioTokenTests(BaseTest):
     def test_get_token_for_customer_by_default(self):
         # Given
         mock_capability = MagicMock()
-        mock_capability.to_jwt.return_value = 'abc123'
+        mock_capability.to_jwt.return_value = b'abc123'
 
         # When
         with patch('browser_calls_flask.views.ClientCapabilityToken', return_value=mock_capability) as mock:
@@ -74,7 +74,7 @@ class TwilioTokenTests(BaseTest):
     def test_get_token_for_agent_if_referrer_is_dashboard(self):
         # Given
         mock_capability = MagicMock()
-        mock_capability.to_jwt.return_value = 'abc123'
+        mock_capability.to_jwt.return_value = b'abc123'
 
         # When
         with patch('browser_calls_flask.views.ClientCapabilityToken', return_value=mock_capability) as mock:
