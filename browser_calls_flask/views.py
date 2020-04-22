@@ -16,7 +16,7 @@ def root():
 @app.route('/tickets', methods=['GET', 'POST'])
 def new_ticket():
     success_message = "Your ticket was submitted! An agent will call you soon."
-    form = SupportTicketForm()
+    form = SupportTicketForm(csrf_enabled=False)
 
     if form.validate_on_submit():
         ticket = SupportTicket(**form.data)
@@ -53,7 +53,7 @@ def get_token():
         capability.allow_client_incoming('customer')
 
     # Generate the capability token
-    token = capability.to_jwt()
+    token = capability.to_jwt().decode('utf-8')
 
     return jsonify({'token': token})
 
