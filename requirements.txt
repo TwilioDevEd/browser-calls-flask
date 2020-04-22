@@ -9,11 +9,13 @@ Flask-WTF==0.12
 Flask-Bootstrap==3.3.5.7
 
 # External libraries
-SQLAlchemy==1.0.11
+SQLAlchemy==1.1.0
 twilio==6.24.1
-phonenumbers==7.2.7
+phonenumbers==8.12.1
+Werkzeug==0.16.1
 
 # Testing
 unittest2==1.1.0
 coverage==4.0.3
 mock==2.0.0
+
