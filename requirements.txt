@@ -23,7 +23,7 @@ pathspec==0.8.1
 phonenumbers==8.12.16
 pycodestyle==2.6.0
 pyflakes==2.2.0
-PyJWT==1.7.1
+PyJWT==2.0.1
 python-dateutil==2.8.1
 python-dotenv==0.15.0
 python-editor==1.0.4
