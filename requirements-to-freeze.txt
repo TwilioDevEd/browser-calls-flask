@@ -17,3 +17,5 @@ python-dotenv
 # Development
 flake8
 black
+mako>=1.2.2 # not directly required, pinned by Snyk to avoid a vulnerability
+pyjwt>=2.4.0 # not directly required, pinned by Snyk to avoid a vulnerability
