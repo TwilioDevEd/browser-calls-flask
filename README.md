@@ -4,32 +4,22 @@
 
 # Browser Calls for Python - Flask
 
-![Flask](https://github.com/TwilioDevEd/browser-calls-flask/workflows/Flask/badge.svg)
+> This repository is now archived and is no longer being maintained. 
+> Check out the [JavaScript SDK Quickstarts](https://www.twilio.com/docs/voice/sdks/javascript/get-started) to get started with browser-based calling. 
 
-Learn how to use [Twilio Client](https://www.twilio.com/client) to make
-browser-to-phone and browser-to-browser calls with ease. The unsatisfied
-customers of the Birchwood Bicycle Polo Co. need your help!
+## About
 
-[Read the full tutorial here](https://www.twilio.com/docs/tutorials/walkthrough/browser-calls/python/flask)!
-
-## Quickstart
+Learn how to use [Twilio's JavaScript SDK](https://www.twilio.com/docs/voice/sdks/javascript) to make browser-to-phone and browser-to-browser calls with ease. The unsatisfied customers of the Birchwood Bicycle Polo Co. need your help!
 
 ### Create a TwiML App
 
-This project is configured to use a **TwiML App**, which allows us to easily set
-the voice URLs for all Twilio phone numbers we purchase in this app.
+This project is configured to use a **TwiML App**, which allows us to easily set the voice URLs for all Twilio phone numbers we purchase in this app.
 
-Create a new TwiML app [here](https://www.twilio.com/user/account/apps/add) and
-use its `SID` as the `TWIML_APPLICATION_SID` environment variable wherever you
-run this app.
+Create a new TwiML app at https://www.twilio.com/console/voice/twiml/apps and use its `Sid` as the `TWILIO_APPLICATION_SID` environment variable wherever you run this app.
 
+Once you have created your TwiML app, configure your Twilio phone number to use it ([instructions here](https://www.twilio.com/help/faq/twilio-client/how-do-i-create-a-twiml-app)).
 
-![Creating a TwiML App](http://howtodocs.s3.amazonaws.com/call-tracking-twiml-app.gif)
-
-Once you have created your TwiML app, configure your Twilio phone number to use
-it ([instructions here](https://www.twilio.com/help/faq/twilio-client/how-do-i-create-a-twiml-app)).
-If you don't have a Twilio phone number yet, you can purchase a new number in
-your [Twilio Account Dashboard](https://www.twilio.com/user/account/phone-numbers/incoming).
+If you don't have a Twilio phone number yet, you can purchase a new number in your [Twilio Account Dashboard](https://www.twilio.com/user/account/phone-numbers/incoming).
 
 ## Local development
 
